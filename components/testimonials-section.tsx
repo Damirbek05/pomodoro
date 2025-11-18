@@ -1,5 +1,6 @@
 import { Marquee } from "@/components/ui/marquee"
 import Image from "next/image"
+import { getAssetPath } from "@/lib/utils"
 
 export function TestimonialsSection() {
   const testimonials = [
@@ -8,28 +9,28 @@ export function TestimonialsSection() {
       role: "UX Designer",
       quote:
         "FocusTimer has completely transformed my workday. I'm getting more done in less time and feeling less stressed.",
-      avatar: "/placeholder.svg?height=64&width=64",
+      avatar: getAssetPath("placeholder.svg?height=64&width=64"),
     },
     {
       name: "Michael Chen",
       role: "Software Developer",
       quote:
         "As a developer, staying in flow state is crucial. The Pomodoro technique with FocusTimer helps me maintain deep focus when coding.",
-      avatar: "/placeholder.svg?height=64&width=64",
+      avatar: getAssetPath("placeholder.svg?height=64&width=64"),
     },
     {
       name: "Emily Rodriguez",
       role: "Content Writer",
       quote:
         "I've tried many productivity apps, but FocusTimer is the only one that's stuck. The simple interface and powerful analytics keep me motivated.",
-      avatar: "/placeholder.svg?height=64&width=64",
+      avatar: getAssetPath("placeholder.svg?height=64&width=64"),
     },
     {
       name: "David Kim",
       role: "Marketing Manager",
       quote:
         "Managing multiple projects is easier with FocusTimer. I can dedicate focused time to each task and track my productivity across projects.",
-      avatar: "/placeholder.svg?height=64&width=64",
+      avatar: getAssetPath("placeholder.svg?height=64&width=64"),
     },
   ]
 
@@ -48,7 +49,7 @@ export function TestimonialsSection() {
             <div className="bg-white/5 border border-white/10 p-6 rounded-xl h-full">
               <div className="flex items-center gap-4 mb-4">
                 <Image
-                  src={testimonial.avatar || "/placeholder.svg"}
+                  src={testimonial.avatar || getAssetPath("placeholder.svg")}
                   alt={testimonial.name}
                   width={64}
                   height={64}

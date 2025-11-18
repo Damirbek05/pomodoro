@@ -1,5 +1,6 @@
 import { Marquee } from "@/components/ui/marquee"
 import Image from "next/image"
+import { getAssetPath } from "@/lib/utils"
 
 export function PartnersSection() {
   const partners = [
@@ -15,7 +16,7 @@ export function PartnersSection() {
         {partners.map((partner) => (
           <div key={partner.name} className="flex items-center justify-center w-48 h-16">
             <Image
-              src={`/placeholder.svg?height=40&width=${partner.width}`}
+              src={getAssetPath(`placeholder.svg?height=40&width=${partner.width}`)}
               alt={partner.name}
               width={partner.width}
               height={40}

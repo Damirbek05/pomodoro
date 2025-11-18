@@ -1,12 +1,13 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { getAssetPath } from "@/lib/utils"
 
 export function IntegrationSection() {
   const integrations = Array(15)
     .fill(null)
     .map((_, i) => ({
       name: `Integration ${i + 1}`,
-      icon: `/placeholder.svg?height=48&width=48`,
+      icon: getAssetPath("placeholder.svg?height=48&width=48"),
     }))
 
   return (
@@ -21,7 +22,7 @@ export function IntegrationSection() {
           {integrations.map((integration, index) => (
             <Image
               key={index}
-              src={integration.icon || "/placeholder.svg"}
+              src={integration.icon || getAssetPath("placeholder.svg")}
               alt={integration.name}
               width={48}
               height={48}

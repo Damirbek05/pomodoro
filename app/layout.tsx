@@ -8,7 +8,10 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "FocusTimer - Boost Your Productivity with Pomodoro Technique",
   description: "Simple, effective Pomodoro timer app to enhance your focus and productivity",
-    generator: 'v0.app'
+  generator: 'v0.app',
+  icons: {
+    icon: '/icon.svg',
+  },
 }
 
 export default function RootLayout({
